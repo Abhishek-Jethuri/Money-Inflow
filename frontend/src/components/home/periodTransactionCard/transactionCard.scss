@@ -1,0 +1,65 @@
+@import "../../../styles/styles.scss";
+
+.transaction-card {
+  height: 100%;
+  box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+  background-color: var(--white);
+  border-radius: 20px;
+  position: relative;
+
+  &__content {
+    @include card-base;
+    @include flex(column, flex-start, stretch, "xl");
+    height: 100%;
+  }
+
+  &__header {
+    @include flex(column, center, flex-start);
+    padding-left: map-get($spacing, "lg");
+    position: absolute;
+    top: map-get($spacing, "md");
+  }
+
+  &__body {
+    @include flex(column);
+    flex: 1;
+    position: relative;
+    margin-top: map-get($spacing, "2xl");
+    min-height: 200px;
+
+    &-title {
+      @include heading-3; // Default font size
+      color: var(--purple-400);
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-100);
+    }
+  }
+
+  &__empty {
+    @include flex(column, center, center);
+    text-align: center;
+    height: calc(100% - #{map-get($spacing, "2xl")});
+    min-height: 150px;
+    color: var(--gray-100);
+    padding: map-get($spacing, "md");
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &__footer {
+    @include flex(row, flex-end, center, "xs");
+    position: absolute;
+    bottom: map-get($spacing, "md");
+    right: map-get($spacing, "md");
+    color: var(--purple-200);
+    cursor: pointer;
+
+    h4 {
+      color: inherit;
+    }
+  }
+}

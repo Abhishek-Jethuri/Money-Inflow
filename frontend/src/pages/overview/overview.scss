@@ -1,0 +1,28 @@
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .overview-category-top {
+    display: flex;
+    justify-content: space-between;
+    .overview-category-title {
+      display: flex;
+      align-items: end;
+    }
+  }
+  .overview-category-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .overview-category-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+      gap: 20px;
+
+      .overview-category-cards-link {
+        text-decoration: none;
+      }
+    }
+  }
+}

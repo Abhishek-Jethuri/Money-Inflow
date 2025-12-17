@@ -1,0 +1,80 @@
+.react-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  display: flex;
+}
+
+.react-modal-wrapper {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-wrapper-right {
+  margin: 2rem 1rem;
+  justify-content: end;
+}
+
+.react-modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content-right {
+  flex-direction: column;
+}
+
+.react-modal-body {
+  padding: 0 1rem;
+}
+.react-modal-header {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-modal-title {
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.btn-close-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-close {
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  background: transparent;
+}
+
+.react-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.react-modal-footer > * {
+  margin: 0 0.25rem;
+}

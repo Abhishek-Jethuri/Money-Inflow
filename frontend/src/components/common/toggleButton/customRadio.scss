@@ -1,0 +1,18 @@
+.radio-input {
+  display: none;
+}
+
+.radio-input:checked + .radio-label {
+  color: var(--white);
+}
+
+.radio-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+}

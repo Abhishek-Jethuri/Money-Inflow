@@ -1,0 +1,29 @@
+.cat-tran-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .cat-tran-left {
+    display: flex;
+    padding-left: 1.5rem;
+    gap: 20px;
+    .cat-tran-header {
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--purple-400);
+      }
+      .sub-title {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--gray-100);
+      }
+    }
+  }
+  .cat-tran-right {
+    .sub-title {
+      color: var(--purple-400);
+    }
+  }
+}

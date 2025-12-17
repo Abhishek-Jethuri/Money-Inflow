@@ -1,0 +1,10 @@
+# Ignore all env files
+.env
+*.env
+.env.local
+.env.production
+backend/.env
+spend-wise/.env
+node_modules/
+.DS_Store
+dist/

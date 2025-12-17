@@ -1,0 +1,22 @@
+.card {
+  @include card-base;
+
+  &--gradient {
+    background: linear-gradient(135deg, #868cff 0%, var(--purple-200) 100%);
+  }
+
+  &__content {
+    @include flex(column, center, flex-start, "md");
+    padding-left: map-get($spacing, "lg");
+  }
+
+  &__title {
+    @include heading-3;
+    color: #a3aed0;
+  }
+
+  &__amount {
+    @include heading-1;
+    color: var(--purple-500);
+  }
+}

@@ -1,0 +1,41 @@
+.pagination-container {
+  display: flex;
+  margin-top: 1rem;
+
+  .pagination-left,
+  .pagination-right {
+    flex: 1;
+  }
+
+  .btn-show-all {
+    border: 1px solid var(--neutral-200);
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:focus {
+      border: 1px solid var(--neutral-200);
+      outline: none;
+      border-color: var(--purple-200) !important;
+    }
+  }
+
+  .btn-pagination {
+    font-size: 16px;
+    padding: 2px 10px;
+    margin: 0 2px;
+
+    &:hover:not(.pagination-current) {
+      border-radius: 8px;
+      background-color: var(--purple-300);
+      color: var(--white);
+    }
+  }
+}
+
+.pagination-current {
+  background-color: var(--purple-400);
+  color: var(--white);
+  border-radius: 8px;
+}

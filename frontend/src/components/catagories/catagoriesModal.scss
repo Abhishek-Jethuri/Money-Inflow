@@ -1,0 +1,45 @@
+@use "../home/addExpense/addExpense.scss";
+
+.category-amount-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 5rem !important;
+  max-height: 5rem !important;
+}
+
+.catagories-modal-form {
+  @extend .addExpense-modal-form;
+}
+
+.catagories-modal-left {
+  @extend .addExpense-modal-left;
+  position: relative;
+  padding: 5rem 5rem 3rem 5rem;
+}
+
+.catagories-modal-right {
+  @extend .addExpense-modal-right;
+}
+
+.accountCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: none;
+}

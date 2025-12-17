@@ -1,0 +1,36 @@
+.catogories {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-grid-icon {
+  display: flex;
+  align-self: end;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  color: var(--purple-100);
+}
+
+.category-add-icon {
+  position: fixed;
+  z-index: 21;
+  bottom: 0;
+  margin-bottom: 2%;
+  display: flex;
+  align-self: end;
+  background-color: var(--purple-100);
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  font-size: 3rem;
+  padding: 1rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+}

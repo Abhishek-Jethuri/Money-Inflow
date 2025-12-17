@@ -1,0 +1,89 @@
+@import "../../styles/styles.scss";
+
+.home {
+  @extend .container;
+  min-height: 84vh;
+
+  &__grid {
+    @include flex(column, flex-start, stretch, "lg");
+  }
+
+  &__top {
+    @extend .section;
+    @extend .section--cols-4;
+  }
+
+  &__center {
+    @extend .section;
+    @extend .section--cols-6;
+
+    .profile {
+      grid-row: span 2;
+      grid-column: span 4;
+
+      @include respond-to("lg") {
+        grid-column: span 2;
+
+        &__info {
+          margin-top: map-get($spacing, "3xl");
+          @include flex(column, space-around, stretch, "sm");
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @extend .section;
+    @extend .section--cols-3;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    .spend-container,
+    .transactions-container,
+    .todo-container {
+      position: relative;
+      grid-row: span 2;
+
+      .category-container {
+        @include flex(column);
+      }
+    }
+  }
+
+  &__heading {
+    &--h2 {
+      @include heading-3;
+      color: var(--gray-100);
+    }
+
+    &--h3 {
+      @include heading-2;
+      color: var(--purple-400);
+    }
+  }
+
+  &__widgets {
+    @include flex(row, flex-start, center, "lg");
+  }
+
+  &__add-button {
+    position: fixed;
+    z-index: 21;
+    bottom: 0;
+    margin-bottom: 2%;
+    display: flex;
+    align-self: end;
+    background-color: var(--purple-100);
+    border: none;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 3rem;
+    padding: 1rem;
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+  }
+}

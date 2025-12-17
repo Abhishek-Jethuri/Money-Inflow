@@ -1,0 +1,76 @@
+@use "../../../App";
+
+.select-container {
+  position: relative;
+  width: 20rem;
+}
+
+.select-sm {
+  width: 15rem;
+}
+
+.select-fw {
+  width: 100%;
+}
+
+.select-wrapper {
+  @extend .input-primary;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options-container {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  max-height: 14rem;
+  padding: 0.5rem 0.5rem;
+  width: calc(100% - 1rem);
+  border: 2px solid rgb(223, 225, 230);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow-y: auto;
+  z-index: 2000;
+}
+
+.options-container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.option-wrapper {
+  display: flex;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  &:hover {
+    background-color: rgb(223, 225, 230);
+    border-radius: 5px;
+  }
+
+  label:last-child {
+    width: 100%;
+    cursor: pointer;
+  }
+  gap: 2rem;
+}
+
+.option {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.option-background {
+  background-color: var(--purple-100);
+  border-radius: 5px;
+  &:hover {
+    background-color: var(--purple-100);
+    border-radius: 5px;
+  }
+}
+
+.rotate-logo {
+  rotate: 180deg;
+}

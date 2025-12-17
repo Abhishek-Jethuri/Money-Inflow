@@ -1,0 +1,27 @@
+@use "../../common/carousel/carouselItem/carouselItem.scss";
+
+.account-widget {
+  @extend .category-widget;
+  padding: 1rem;
+  .account-wrapper {
+    @extend .category-left;
+
+    .account-top {
+      @extend .category-top;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 0;
+      .title {
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+
+    .account-bottom {
+      @extend .category-bottom;
+      display: flex;
+      justify-content: end;
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.progress {
+  width: 45px;
+  height: 45px;
+}
+
+.circle-background {
+  fill: none;
+  stroke: #ddd;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: var(--purple-100);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

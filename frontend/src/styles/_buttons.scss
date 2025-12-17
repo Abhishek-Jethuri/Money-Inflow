@@ -1,0 +1,14 @@
+@mixin button-base {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: map-get($spacing, "xs");
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  padding: map-get($spacing, "md") map-get($spacing, "xl");
+  border-radius: 50px;
+  transition: all 0.2s ease-out;
+}

@@ -1,0 +1,137 @@
+@import "../../../styles/styles.scss";
+
+.account-card {
+  @include card-base;
+
+  h3 {
+    @include heading-3;
+    color: var(--white);
+  }
+
+  .empty-placeholder {
+    @include flex(column, center, center);
+    text-align: center;
+    height: calc(100% - #{map-get($spacing, "2xl")});
+    min-height: 150px;
+    color: var(--gray-100);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+
+    .account-top {
+      @include flex(column, baseline, flex-start);
+      padding-left: map-get($spacing, "lg");
+    }
+
+    .account-widget-container {
+      @include flex(column, center, center);
+      height: 100%;
+      h3 {
+        @include heading-3;
+        color: var(--purple-400);
+      }
+      p {
+        font-size: 12px;
+      }
+      h4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--gray-100);
+      }
+    }
+
+    .account-add-icon {
+      @include flex(row, center, center);
+      background-color: var(--purple-100);
+      border: none;
+      border-radius: 10px;
+      color: var(--white);
+      font-size: 1rem;
+      padding: map-get($spacing, "sm");
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.09);
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        background-color: var(--purple-200);
+      }
+    }
+
+    .account-bottom {
+      @include flex(column, flex-end, center);
+      cursor: pointer;
+    }
+  }
+
+  .account-spending-container {
+    @include flex(column);
+    gap: map-get($spacing, "lg");
+    padding: map-get($spacing, "xs") map-get($spacing, "md");
+
+    .box-shadow {
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.09);
+    }
+
+    .account-container {
+      position: relative;
+      .account {
+        @include flex(row, flex-start, flex-start);
+
+        .account-top {
+          width: 50%;
+          z-index: 2;
+          color: var(--white);
+          &__h2 {
+            color: var(--white);
+          }
+
+          &__h3 {
+            color: var(--white);
+          }
+          .account-amount {
+            &__h1 {
+              color: var(--white);
+            }
+            margin-top: map-get($spacing, "3xl");
+          }
+        }
+
+        .account-bottom {
+          z-index: 1;
+        }
+      }
+    }
+
+    .account-container::before {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      // display: block;
+      // left: 50%;
+      // top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      background-color: var(--purple-200);
+      background: linear-gradient(120deg, #868cff -30%, var(--purple-200) 120%);
+    }
+
+    .earning-spending-container {
+      @include respond-to("sm") {
+        @include flex(row);
+      }
+      @include flex(column);
+      gap: map-get($spacing, "lg");
+      h3 {
+        color: var(--purple-400);
+      }
+      .margin-top {
+        margin-top: map-get($spacing, "3xl");
+      }
+
+      .earning,
+      .spending {
+        flex-grow: 1;
+      }
+    }
+  }
+}

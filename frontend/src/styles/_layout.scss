@@ -1,0 +1,25 @@
+.container {
+  @include flex(column, flex-start, stretch, "lg");
+
+  &--grid {
+    @include grid(1, "lg");
+  }
+}
+
+.section {
+  @include grid(1, "lg");
+
+  @include respond-to("lg") {
+    &--cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &--cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    &--cols-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+}

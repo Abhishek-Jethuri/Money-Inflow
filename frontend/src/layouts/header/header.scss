@@ -1,0 +1,200 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--neutral-200);
+  background: transparent;
+
+  .header-actions-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s ease-out;
+      font-family: "DM Sans", sans-serif;
+
+      &:first-child {
+        color: var(--purple-100);
+        background: linear-gradient(180deg, #fff, #f5f5fa);
+        box-shadow:
+          0 4px 11px 0 rgb(37 44 97 / 15%),
+          0 1px 3px 0 rgb(93 100 148 / 20%);
+
+        &:hover {
+          box-shadow:
+            0px 4px 8px rgb(37 44 97 / 15%),
+            0px 7px 13px -3px rgb(93 100 148 / 20%),
+            inset 0px -3px 0px #f5f5fa;
+          transform: translateY(-2px);
+        }
+      }
+
+      &:last-child {
+        color: var(--white);
+        background: linear-gradient(
+          180deg,
+          var(--purple-100),
+          var(--purple-200)
+        );
+        box-shadow:
+          0 4px 11px 0 rgb(37 44 97 / 15%),
+          0 1px 3px 0 rgb(93 100 148 / 20%);
+
+        &:hover {
+          box-shadow:
+            0px 4px 8px rgb(45 35 66 / 40%),
+            0px 7px 13px -3px rgb(45 35 66 / 30%),
+            inset 0px -3px 0px var(--purple-200);
+          transform: translateY(-2px);
+        }
+      }
+
+      svg {
+        font-size: 16px;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+      font-family: "DM Sans", sans-serif;
+      color: var(--white);
+      background: linear-gradient(180deg, var(--purple-100), var(--purple-200));
+      box-shadow:
+        0 4px 11px 0 rgb(37 44 97 / 15%),
+        0 1px 3px 0 rgb(93 100 148 / 20%);
+
+      &:hover {
+        box-shadow:
+          0px 4px 8px rgb(45 35 66 / 40%),
+          0px 7px 13px -3px rgb(45 35 66 / 30%),
+          inset 0px -3px 0px var(--purple-200);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        box-shadow: inset 0px 3px 7px var(--purple-200);
+        transform: translateY(2px);
+      }
+
+      svg {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.page-heading {
+  span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--purple-400);
+    letter-spacing: -0.56px;
+    line-height: 1.2;
+  }
+}
+
+.header-search-container {
+  display: flex;
+  .header-notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    gap: 2px;
+    padding: 0px 8px;
+    color: #878787;
+  }
+  .header-search {
+    display: flex;
+    width: 422px;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 2;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #2b3674;
+
+    input {
+      border: none;
+      width: 100%;
+      font-size: 12px;
+      background-color: white;
+      margin-left: 6px;
+      color: var(--gray-100);
+      outline: none;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+
+    .header-actions-container {
+      width: 100%;
+      justify-content: flex-end;
+      gap: 0.75rem;
+
+      a,
+      .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 13px;
+
+        svg {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .page-heading {
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    .header-actions-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+
+      a,
+      .btn {
+        justify-content: center;
+        padding: 0.75rem 1rem;
+      }
+    }
+  }
+}

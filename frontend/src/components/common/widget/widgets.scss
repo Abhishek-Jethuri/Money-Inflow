@@ -1,0 +1,78 @@
+.widget {
+  display: flex;
+  justify-content: start;
+  flex: 1;
+  padding: 10px;
+  box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+  background-color: white;
+  border-radius: 20px;
+  height: 100px;
+  gap: 20px;
+  position: relative;
+}
+
+.add-transaction-background {
+  background-color: var(--purple-200) !important;
+  background: linear-gradient(135deg, #868cff 0%, var(--purple-200) 100%);
+  cursor: pointer;
+}
+
+.add-transaction-background::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: inline-block;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  border-top-right-radius: 20px;
+  background-color: var(--purple-200);
+  background: linear-gradient(120deg, #868cff -30%, var(--purple-200) 120%);
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "DM Sans";
+  padding-left: 10px;
+
+  .icon-container {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
+    .icon {
+      font-size: 28px;
+      color: white;
+    }
+  }
+
+  .add-transaction-title {
+    color: var(--white);
+    font-weight: 800;
+  }
+
+  .title {
+    font-size: 14px;
+    color: #a3aed0;
+  }
+
+  .amount {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    color: #1b2559;
+  }
+}

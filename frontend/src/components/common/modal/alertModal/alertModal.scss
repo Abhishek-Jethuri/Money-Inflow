@@ -1,0 +1,30 @@
+@use "../../../home/addExpense/addExpense.scss";
+
+.alert-modal-form {
+  @extend .addExpense-modal-form;
+}
+.alert-modal-left {
+  @extend .addExpense-modal-left;
+  position: relative;
+}
+.alert-modal-right {
+  @extend .addExpense-modal-right;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.alert-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icon-container {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+}

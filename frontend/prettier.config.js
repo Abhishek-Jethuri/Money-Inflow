@@ -1,0 +1,5 @@
+export default {
+  semi: true,
+  tabWidth: 2,
+  trailingComma: "es5",
+};

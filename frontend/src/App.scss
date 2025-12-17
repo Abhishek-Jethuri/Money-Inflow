@@ -1,0 +1,221 @@
+:root {
+  --neutral-100: #dde3ee; //300 -> 100
+  --neutral-200: #e3e3e3; //100 -> 200
+  --neutral-300: #ebebeb; //200 -> 300
+  --neutral-400: #e9edf7; //700 -> 400
+  --neutral-500: #f3f5f9;
+  --neutral-600: #f3f3f3;
+  --neutral-700: #f6f6f5; //400 -> 700
+  --gray-100: #767b85;
+  --gray-200: #616161;
+  --purple-100: #5563f5;
+  --purple-200: #4318ff;
+  --purple-300: #55608f;
+  --purple-400: #2b3674;
+  --purple-500: #1b2559;
+  --blue-100: rgb(76, 154, 255);
+  --blue-200: #9fe5e1;
+  --dark-100: #1b2128;
+  --white: #ffffff;
+}
+
+.btn {
+  border: none;
+}
+
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  // height: 38px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg, #7c8aff, #3c4fe0);
+  box-shadow:
+    0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all 0.2s ease-out;
+  &:hover {
+    box-shadow:
+      0px 4px 8px rgb(45 35 66 / 40%),
+      0px 7px 13px -3px rgb(45 35 66 / 30%),
+      inset 0px -3px 0px #3c4fe0;
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: inset 0px 3px 7px #3c4fe0;
+    transform: translateY(2px);
+  }
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    background-image: linear-gradient(180deg, #d3d3d3, #a9a9a9);
+    box-shadow: none;
+    color: #f0f0f0;
+    transform: none;
+  }
+  &.rounded-none {
+    border-radius: 0px;
+  }
+  &.rounded-md {
+    border-radius: 10px;
+  }
+  &.rounded-lg {
+    border-radius: 30px;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(72, 76, 122);
+  font-size: 14px;
+  // height: 38px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg, #fff, #f5f5fa);
+  box-shadow:
+    0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all 0.2s ease-out;
+  &:hover {
+    box-shadow:
+      0px 4px 8px rgb(37 44 97 / 15%),
+      0px 7px 13px -3px rgb(93 100 148 / 20%),
+      inset 0px -3px 0px #f5f5fa;
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: inset 0px 3px 7px #f5f5fa;
+    transform: translateY(2px);
+  }
+}
+
+.input-primary {
+  background-color: rgb(250, 251, 252);
+  border-color: rgb(223, 225, 230);
+  color: rgb(9, 30, 66);
+  cursor: text;
+  border-radius: 8px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition:
+    background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
+  line-height: 1.42857;
+  padding: 8px 6px;
+  // height: 45px;
+  font-size: 17px !important;
+  &:hover {
+    background-color: rgb(235, 236, 240);
+  }
+  &:focus {
+    outline: none;
+    background-color: var(--blue-100);
+    border-color: rgb(76, 154, 255) !important;
+  }
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px var(--gray-100) solid;
+  border-radius: 5px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var(--neutral-100);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  border: 2px var(--purple-100) solid;
+  background-color: var(--purple-100);
+}
+
+.checkbox-container input:indeterminate ~ .checkmark {
+  border: 2px var(--purple-100) solid;
+  background-color: var(--purple-100);
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container input:indeterminate ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.checkbox-container input:indeterminate ~ .checkmark:after {
+  left: 5px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border: solid white;
+  border-width: 2px 0 0 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,17 @@
+@use "../categories/categories.scss";
+@import "../../styles/styles.scss";
+
+.accounts-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  @include respond-to("lg") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .accounts-add-icon {
+    @extend .category-add-icon;
+    right: 2%;
+  }
+}
